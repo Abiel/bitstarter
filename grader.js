@@ -49,6 +49,7 @@ var checkHtmlFile = function(htmlfile, checksfile) {
     var checks = loadChecks(checksfile).sort();
     var out = {};
     for(var ii in checks) {
+	//console.log('checking-->' + checks[ii] + "found: " + $(checks[ii]).length);
         var present = $(checks[ii]).length > 0;
         out[checks[ii]] = present;
     }
